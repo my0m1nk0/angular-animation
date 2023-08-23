@@ -1,0 +1,27 @@
+<h2>Increment and Decrement</h2>
+
+<div class="row mt-4">
+   <div class="col m-0 p-0 pe-1">
+    <input type="text" #input class="form-control" placeholder="Enter Messsage">
+   </div>
+    <div class="col-2 m-0 p-0">
+        <button class="btn btn-primary" (click)="add(input)">
+            <i class="fa fa-plus"></i>Add
+        </button>
+    </div>
+</div>
+<div class="card mt-4">
+    <div class="card-header">
+        Messages
+    </div>
+    
+<div class="card-body">
+    <div [@increDecre]="list.length" class="list-group">
+        <span class="list-group-item d-flex justify-content-between mb-၁" *ngFor="let item of list; index as i">
+            {{item}}
+            <span (click)="remove(i)" class="btn-link "><i class="fa fa-remove"></i></span>
+        </span>
+    </div>
+</div>
+
+</div>

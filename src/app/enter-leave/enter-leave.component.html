@@ -1,0 +1,18 @@
+<h3>Enter Leave Annimation</h3>
+<button (click)="page = 1" class="btn btn-primary me-2">
+    Page 1
+</button>
+<button (click)="page =2" class="btn btn-warning me-2">
+    Page 2
+</button>
+<button (click)="page = 3" class="btn btn-success me-2">
+    Page 3
+</button>
+
+
+<div class="wrapper" [ngSwitch]="page">
+    <div class="bg-primary" [@openLeave] *ngSwitchCase="1"></div>
+    <div class="bg-warning" [@openLeave] *ngSwitchCase="2"></div>
+    <div class="bg-success" [@openLeave] *ngSwitchCase="3"></div>
+    
+</div>
